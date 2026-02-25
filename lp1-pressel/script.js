@@ -119,27 +119,31 @@ const ctaButton = document.getElementById('whatsapp-cta');
 if (ctaButton) {
     const utm = getUTMParams();
     const whatsappBase = 'https://wa.me/5511980782216';
+
+    // Mensagem limpa — sem dados de rastreamento visíveis ao cliente
     const message = encodeURIComponent(
-        `Olá! Vi o vosso anúncio e gostaria de saber mais sobre a secretária virtual.\n\n[origem: pressel | source: ${utm.source} | campaign: ${utm.campaign}]`
+        `Olá! Vi o vosso anúncio e gostaria de saber mais sobre a secretária virtual.`
     );
     ctaButton.href = `${whatsappBase}?text=${message}`;
 
     ctaButton.addEventListener('click', () => {
+        // Rastreamento interno — invisível ao cliente
         const eventData = {
             event: 'whatsapp_click',
             page: 'pressel',
+            origem: 'pressel',
             timestamp: new Date().toISOString(),
             utm: utm,
             userAgent: navigator.userAgent
         };
 
-        // Enviar para o n8n (descomentar quando o webhook estiver pronto)
+        // Enviar para o n8n (ativar quando o webhook estiver pronto)
         // fetch('https://n8n.nucleotech.site/webhook/lead-tracking', {
         //     method: 'POST',
         //     headers: { 'Content-Type': 'application/json' },
         //     body: JSON.stringify(eventData)
         // }).catch(() => {});
 
-        console.log('CTA Click:', eventData);
+        console.log('Lead capturado:', eventData);
     });
 }
