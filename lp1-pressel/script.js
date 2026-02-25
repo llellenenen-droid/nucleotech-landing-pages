@@ -118,7 +118,7 @@ function getUTMParams() {
 const ctaButton = document.getElementById('whatsapp-cta');
 if (ctaButton) {
     const utm = getUTMParams();
-    const whatsappBase = 'https://wa.me/351XXXXXXXXX';
+    const whatsappBase = 'https://wa.me/5511980782216';
     const message = encodeURIComponent(
         `Olá! Vi o vosso anúncio e gostaria de saber mais sobre a secretária virtual.\n\n[origem: pressel | source: ${utm.source} | campaign: ${utm.campaign}]`
     );
@@ -132,6 +132,14 @@ if (ctaButton) {
             utm: utm,
             userAgent: navigator.userAgent
         };
+
+        // Enviar para o n8n (descomentar quando o webhook estiver pronto)
+        // fetch('https://n8n.nucleotech.site/webhook/lead-tracking', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(eventData)
+        // }).catch(() => {});
+
         console.log('CTA Click:', eventData);
     });
 }
