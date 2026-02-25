@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NucleoTech.ai — Automatize o Seu Negócio</title>
+    <meta name="description" content="Deixe os seus dados e a nossa equipa entra em contacto para mostrar como a IA pode transformar o seu atendimento.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+
+    <!-- FORM SCREEN -->
+    <main class="container" id="form-screen">
+        <div class="logo-wrapper">
+            <div class="logo-icon">
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="28" stroke="url(#g1)" stroke-width="2" fill="none" opacity="0.3"/>
+                    <circle cx="30" cy="22" r="3" fill="#4dc9f6"/>
+                    <circle cx="22" cy="32" r="2.5" fill="#2d8fba"/>
+                    <circle cx="38" cy="32" r="2.5" fill="#2d8fba"/>
+                    <circle cx="30" cy="38" r="2" fill="#1B3B5A"/>
+                    <line x1="30" y1="22" x2="22" y2="32" stroke="#2d8fba" stroke-width="1.5" opacity="0.6"/>
+                    <line x1="30" y1="22" x2="38" y2="32" stroke="#2d8fba" stroke-width="1.5" opacity="0.6"/>
+                    <line x1="22" y1="32" x2="30" y2="38" stroke="#1B3B5A" stroke-width="1.5" opacity="0.4"/>
+                    <line x1="38" y1="32" x2="30" y2="38" stroke="#1B3B5A" stroke-width="1.5" opacity="0.4"/>
+                    <defs><linearGradient id="g1" x1="0" y1="0" x2="60" y2="60"><stop offset="0%" stop-color="#4dc9f6"/><stop offset="100%" stop-color="#1B3B5A"/></linearGradient></defs>
+                </svg>
+            </div>
+            <span class="logo-text">NucleoTech<span class="logo-dot">.ai</span></span>
+        </div>
+
+        <div class="hero">
+            <div class="badge"><span class="badge-dot"></span>Resposta em menos de 5 minutos</div>
+            <h1 class="hero-title">Saiba como a <span class="gradient-text">IA pode trabalhar</span> por si.</h1>
+            <p class="hero-subtitle">Preencha os seus dados e a nossa equipa entra em contacto para apresentar uma solução à medida do seu negócio.</p>
+        </div>
+
+        <form class="lead-form" id="lead-form" novalidate>
+            <div class="field-group">
+                <div class="input-wrapper">
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder=" " required autocomplete="tel">
+                    <label for="whatsapp">📱 WhatsApp (com indicativo do país)</label>
+                    <div class="input-hint">Ex: +351 912 345 678</div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                    <label for="email">📧 Email</label>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="negocio" name="negocio" placeholder=" " required rows="3"></textarea>
+                    <label for="negocio">🏢 Conte-nos sobre o seu negócio</label>
+                    <div class="input-hint">Ex: Tenho uma clínica com 3 médicos e quero automatizar agendamentos</div>
+                </div>
+            </div>
+
+            <div class="submit-wrapper">
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">Quero saber mais →</span>
+                    <span class="btn-loading" style="display:none">
+                        <span class="spinner"></span> A enviar...
+                    </span>
+                </button>
+            </div>
+
+            <p class="privacy-note">🔒 Os seus dados estão seguros. Não partilhamos informações com terceiros.</p>
+        </form>
+    </main>
+
+    <!-- SUCCESS SCREEN -->
+    <div class="success-screen" id="success-screen" style="display:none">
+        <div class="success-content">
+            <div class="success-icon">
+                <svg viewBox="0 0 60 60" fill="none">
+                    <circle cx="30" cy="30" r="28" stroke="#25D366" stroke-width="2" opacity="0.3"/>
+                    <circle cx="30" cy="30" r="20" fill="rgba(37,211,102,0.1)" stroke="#25D366" stroke-width="1.5"/>
+                    <path d="M20 30l7 7 13-14" stroke="#25D366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2 class="success-title">Recebemos o seu contacto!</h2>
+            <p class="success-text">A nossa equipa vai entrar em contacto consigo em breve pelo WhatsApp e email que indicou.</p>
+            <div class="success-badge">
+                <span class="badge-dot" style="background:#25D366"></span>
+                A entrar em contacto nos próximos minutos
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
