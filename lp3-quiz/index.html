@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NucleoTech.ai — Descubra o Potencial da IA no Seu Negócio</title>
+    <meta name="description" content="Faça o quiz e descubra como a Inteligência Artificial pode transformar o atendimento do seu negócio em minutos.">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1649618706447217');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1649618706447217&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="container" id="quiz-screen">
+        <div class="logo-wrapper">
+            <div class="logo-icon">
+                <svg viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="url(#g1)" stroke-width="2"/>
+                    <circle cx="20" cy="20" r="8" fill="url(#g1)" opacity="0.8"/>
+                    <circle cx="20" cy="12" r="3" fill="#4dc9f6"/>
+                    <circle cx="27" cy="24" r="3" fill="#2d8fba"/>
+                    <circle cx="13" cy="24" r="3" fill="#a78bfa"/>
+                    <line x1="20" y1="15" x2="20" y2="20" stroke="#4dc9f6" stroke-width="1.5"/>
+                    <line x1="23" y1="20" x2="27" y2="22" stroke="#2d8fba" stroke-width="1.5"/>
+                    <line x1="17" y1="20" x2="13" y2="22" stroke="#a78bfa" stroke-width="1.5"/>
+                    <defs><linearGradient id="g1" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#4dc9f6"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs>
+                </svg>
+            </div>
+            <span class="logo-text">NucleoTech<span class="logo-dot">.ai</span></span>
+        </div>
+
+        <div class="hero">
+            <div class="badge"><span class="badge-dot"></span> Quiz Interativo</div>
+            <h1 class="hero-title">Descubra o <span class="gradient-text">potencial da IA</span> no seu negócio</h1>
+            <p class="hero-subtitle">Responda 3 perguntas rápidas e veja como a Inteligência Artificial pode transformar o seu atendimento.</p>
+        </div>
+
+        <!-- PROGRESS BAR -->
+        <div class="quiz-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span class="progress-text" id="progress-text">Pergunta 1 de 3</span>
+        </div>
+
+        <!-- QUESTION 1 -->
+        <div class="quiz-question active" id="q1">
+            <h2 class="question-title">Qual é o maior desafio no atendimento do seu negócio?</h2>
+            <div class="options">
+                <button class="option-btn" data-q="1" data-v="Responder rápido">⚡ Responder clientes a tempo</button>
+                <button class="option-btn" data-q="1" data-v="Fora do horário">🌙 Atender fora do horário comercial</button>
+                <button class="option-btn" data-q="1" data-v="Perguntas repetitivas">🔁 Lidar com perguntas repetitivas</button>
+                <button class="option-btn" data-q="1" data-v="Gerir tudo sozinho">🤹 Gerir tudo sozinho(a)</button>
+            </div>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="quiz-question" id="q2">
+            <h2 class="question-title">Quantas mensagens/contactos recebe por dia?</h2>
+            <div class="options">
+                <button class="option-btn" data-q="2" data-v="Menos de 10">📱 Menos de 10</button>
+                <button class="option-btn" data-q="2" data-v="10-30">📲 Entre 10 e 30</button>
+                <button class="option-btn" data-q="2" data-v="30-100">📬 Entre 30 e 100</button>
+                <button class="option-btn" data-q="2" data-v="Mais de 100">🔥 Mais de 100</button>
+            </div>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="quiz-question" id="q3">
+            <h2 class="question-title">Já tentou automatizar algo no seu negócio?</h2>
+            <div class="options">
+                <button class="option-btn" data-q="3" data-v="Nunca tentei">🆕 Nunca tentei</button>
+                <button class="option-btn" data-q="3" data-v="Tentei mas não resultou">😕 Tentei, mas não resultou</button>
+                <button class="option-btn" data-q="3" data-v="Uso algo básico">⚙️ Uso algo básico</button>
+                <button class="option-btn" data-q="3" data-v="Quero melhorar">🚀 Sim, e quero melhorar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORM SCREEN (after quiz) -->
+    <div class="container" id="form-screen" style="display:none">
+        <div class="logo-wrapper">
+            <div class="logo-icon">
+                <svg viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="url(#g2)" stroke-width="2"/>
+                    <circle cx="20" cy="20" r="8" fill="url(#g2)" opacity="0.8"/>
+                    <circle cx="20" cy="12" r="3" fill="#4dc9f6"/>
+                    <circle cx="27" cy="24" r="3" fill="#2d8fba"/>
+                    <circle cx="13" cy="24" r="3" fill="#a78bfa"/>
+                    <line x1="20" y1="15" x2="20" y2="20" stroke="#4dc9f6" stroke-width="1.5"/>
+                    <line x1="23" y1="20" x2="27" y2="22" stroke="#2d8fba" stroke-width="1.5"/>
+                    <line x1="17" y1="20" x2="13" y2="22" stroke="#a78bfa" stroke-width="1.5"/>
+                    <defs><linearGradient id="g2" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#4dc9f6"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs>
+                </svg>
+            </div>
+            <span class="logo-text">NucleoTech<span class="logo-dot">.ai</span></span>
+        </div>
+
+        <div class="hero">
+            <div class="badge result-badge"><span class="badge-dot"></span> <span id="result-label">Resultado</span></div>
+            <h1 class="hero-title">A IA pode <span class="gradient-text">transformar</span> o seu negócio!</h1>
+            <p class="hero-subtitle" id="result-text">Com base nas suas respostas, identificámos que a automação com IA pode poupar-lhe horas por semana e melhorar significativamente o seu atendimento.</p>
+        </div>
+
+        <form id="lead-form" class="lead-form" autocomplete="off">
+            <p class="form-intro">Deixe os seus dados para receber uma análise personalizada:</p>
+            <div class="field-group">
+                <div class="input-wrapper">
+                    <input type="tel" id="whatsapp" placeholder=" " required>
+                    <label for="whatsapp">📱 WhatsApp (com indicativo)</label>
+                    <span class="input-hint">Ex: +351 912 345 678</span>
+                    <span class="error-msg">Preencha o seu WhatsApp</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">📧 O seu melhor email</label>
+                    <span class="error-msg">Preencha um email válido</span>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="negocio" rows="3" placeholder=" " required></textarea>
+                    <label for="negocio">🏢 Qual é o seu negócio?</label>
+                    <span class="error-msg">Conte-nos sobre o seu negócio</span>
+                </div>
+            </div>
+            <div class="submit-wrapper">
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">Ver a Minha Análise Completa →</span>
+                    <span class="btn-loading" style="display:none"><span class="spinner"></span> A enviar...</span>
+                </button>
+                <span class="privacy-note">🔒 Os seus dados estão seguros. Não partilhamos informações com terceiros.</span>
+            </div>
+        </form>
+    </div>
+
+    <!-- SUCCESS SCREEN -->
+    <div id="success-screen" style="display:none" class="success-screen">
+        <div class="success-content">
+            <div class="success-icon">
+                <svg viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="38" stroke="url(#gs)" stroke-width="2"/>
+                    <path d="M24 42L34 52L56 30" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs><linearGradient id="gs" x1="0" y1="0" x2="80" y2="80"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#2d8fba"/></linearGradient></defs>
+                </svg>
+            </div>
+            <h2 class="success-title">Recebemos o seu contacto!</h2>
+            <p class="success-text">A nossa equipa vai entrar em contacto consigo em breve pelo WhatsApp e email que indicou.</p>
+            <div class="success-badge">✓ Análise personalizada a caminho</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
